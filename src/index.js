@@ -22,9 +22,9 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.get("/", (_, res) => {
-  res.send("..serving that Brathering hot n' spicy.. :)");
-});
+app.get("/", ( _, res) => {
+    res.send("..serving that Brathering hot, grilled n' spicy.. :)")
+})
 
 app.get("/api/products/all", async function getAllProductsController(_, res) {
   try {
@@ -142,4 +142,4 @@ app.post("/api/users/addToWishlist", doAuthMiddleware, async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log("..serving that fish at..", PORT));
+app.listen(PORT, () => console.log("..serving that fish at..", PORT))
